@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- box icon CDN -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Resume || Kingsley Solomon</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="index-main">
+        <a href="./resume.html">
+            <i class='bx bxs-down-arrow-circle bx-fade-up' style="color: #e8352c"></i>
+            <div>
+                <img src="https://res.cloudinary.com/kingsleysolomon/image/upload/v1629540932/hng/HNG_sfzgo1.png"
+                    alt="HNG-LOGO">
+            </div>
+            <h1 class="name"></h1>
+        </a>
+    </main>
+    <script>
+        const letters = [
+            'K',
+            'I',
+            'N',
+            'G',
+            'S',
+            'L',
+            'E',
+            'Y',
+            ' ',
+            'S',
+            'O',
+            'L',
+            'O',
+            'M',
+            'O',
+            'N',
+        ]
+
+        const h1 = document.querySelector('.name')
+
+        h1.textContent = null
+
+        for (let i = 0; i < letters.length; i++) {
+            setTimeout(() => {
+                h1.textContent += letters[i]
+            }, i * 100)
+        }
+    </script>
+</body>
+
+</html>

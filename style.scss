@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Raleway&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    font-family: 'Raleway',
+        sans-serif;
+    outline: none !important;
+}
+
+// variables
+$main-color: hsl(3, 80%, 54%);
+$accent-color: hsl(0, 100%, 99%);
+$font-color: #343A40;
+
+// ================================
+// reset styling
+// ================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: $font-color;
+    font-size: 20px;
+}
+
+button {
+    border: 1px solid $main-color !important;
+    color: $main-color !important;
+    font-weight: bold !important;
+
+    &:hover {
+        background: $main-color !important;
+        color: $accent-color !important;
+    }
+}
+
+.name {
+    font-family: 'Alumni Sans',
+        sans-serif;
+    letter-spacing: 2px;
+    font-size: 30px !important;
+}
+
+.zuri-logo {
+    width: 2rem;
+    height: 2rem;
+    overflow: hidden;
+    border-radius: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+p,
+li {
+    font-family: 'Alumni Sans',
+        sans-serif;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+a {
+    color: $main-color;
+    cursor: pointer;
+
+}
+
+.high-light {
+    font-size: 16px;
+    color: $main-color;
+}
+
+i {
+    font-size: 3rem;
+}
+
+.cc-skills {
+    margin-top: -10rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 90%;
+    height: 230px;
+    
+    .site {
+        // border: 1px solid red;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        transform: translateY(-100%);
+        transition: all 0.3s ease-in-out;
+        z-index: 1;
+        
+    }
+}
+
+.cc-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+
+
+@keyframes kenburns {
+    0% {
+        -webkit-transform-origin: bottom left;
+        -moz-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+        -o-transform-origin: bottom left;
+        transform-origin: bottom left;
+        transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        /* IE 9 */
+
+        -webkit-transform: scale(1.0);
+        /* Safari and Chrome */
+
+        -o-transform: scale(1.0);
+        /* Opera */
+
+        -moz-transform: scale(1.0);
+        /* Firefox */
+    }
+
+    100% {
+        transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        /* IE 9 */
+
+        -webkit-transform: scale(1.2);
+        /* Safari and Chrome */
+
+        -o-transform: scale(1.2);
+        /* Opera */
+
+        -moz-transform: scale(1.2);
+        /* Firefox */
+    }
+}
+
+
+.cc-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: kenburns 15s linear 2s infinite;
+
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation-name: kenburns;
+    }
+}
+
+.cc-container {
+    width: 1300px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.cc-logo {
+    // filter: grayscale();
+
+    &:hover {
+        filter: grayscale(0);
+    }
+}
+
+.cc-clipped-div {
+    clip-path: polygon(0 0, 100% 0, 100% 79%, 50% 100%, 0 79%);
+}
+
+.bg-warning {
+    background-color: $accent-color !important;
+}
+
+// ================================
+// end of reset style
+// ================================
+
+
+// ===========
+// INDEX PAGE
+// ===========
+.index-main {
+    // border: 1px solid red;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('https://res.cloudinary.com/kingsleysolomon/image/upload/c_scale,w_1000/v1629661702/hng/pexels-negative-space-169573_gafgj6.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    a {
+        cursor: pointer;
+        text-align: center;
+        z-index: 1;
+
+
+        div {
+            // border: 1px solid red;
+            width: 10rem;
+            height: 10rem;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        h1 {
+            font-size: 4rem;
+            transition: .3s ease-in;
+            color: #fff;
+
+            &:hover {
+                color: #e7332b;
+            }
+        }
+    }
+}
+
+// ==================
+// END OF INDEX STYLE
+// ===================
+
+
+
+// HEADER
+
+header {
+
+    nav {
+        background: $main-color;
+    }
+
+    .profile-img {
+        width: 15rem;
+        height: 15rem;
+        overflow: hidden;
+        border: 10px solid #fff;
+        border-radius: 100%;
+
+
+        img {
+            // margin-top: 20em;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .socials {
+        // border: 1px solid red;
+        width: fit-content;
+        margin: 0 auto;
+
+        a {
+            color: $main-color;
+            margin: 0 .5rem;
+
+            i {
+                font-size: 2rem;
+                transition: all 0.2s ease-in;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+}
+
+// MAIN
+main .section-one {
+
+
+
+    h5 {
+        font-size: 12px;
+        color: $main-color;
+
+        span i {
+            font-size: 12px;
+        }
+    }
+}
+
+// FOOTER
+.sponsor {
+
+    animation: slide 15s linear infinite;
+
+    p {
+        font-size: 12px;
+    }
+
+    @keyframes slide {
+        from {
+            transform: translateX(-70%);
+        }
+
+        to {
+            transform: translateX(70%);
+        }
+    }
+}
+
+
+@media (min-width:576px) {
+    //================================ // reset styling
+    // ================================
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+
+        font-size: 30px;
+    }
+
+    .name {
+        font-family: 'Alumni Sans',
+            sans-serif;
+        letter-spacing: 2px;
+        font-size: 4rem !important;
+    }
+
+    p,
+    li {
+        font-size: 20px;
+    }
+
+    .cc-languages {
+        // filter: grayscale();
+        width: 4rem;
+
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+
+    // ================================
+    // end of reset style
+    // ================================
+
+
+    // ===========
+    // INDEX PAGE
+    // ===========
+    .index-main {
+
+        a {
+
+            h1 {
+                font-size: 4rem;
+            }
+        }
+    }
+
+    // ==================
+    // END OF INDEX STYLE
+    // ===================
+
+    // MAIN
+    main .section-one {
+
+        h5 {
+            font-size: 12px;
+            color: $main-color;
+
+            span i {
+                font-size: 12px;
+            }
+        }
+    }
+
+    // FOOTER
+    .sponsor {
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .card {
+        width: 25rem;
+    }
+}
